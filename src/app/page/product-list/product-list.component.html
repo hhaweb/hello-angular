@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+        <div class="card-title">
+            <h5>Product List</h5>
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Country</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productList">
+                        <td>{{data.id}}</td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.brand}}</td>
+                        <td>{{data.madein}}</td>
+                        <td>{{data.price}}</td>
+                        <td>
+                            <button (click)="deleteEmployee(data.id)" class="btn btn-danger">Delete</button>
+                            <button (click)="addProduct()" class="btn btn-info" style="margin-left: 10px">Add</button>
+                            <button (click)="employeeDetails(data.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
